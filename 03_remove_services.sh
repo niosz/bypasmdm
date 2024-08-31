@@ -36,5 +36,6 @@ fi;
 # ------------------------------------------------------------------------------------- main code
 
 ls "/Library/LaunchAgents" | grep -E "jamf|microsoft|pulsesecure|adobe" | awk '{print "mv \"/Library/LaunchAgents/"$0"\" \"/Library/LaunchAgents/"$0"_disabled\""}' | bash;
-ls "/Library/LaunchDaemons/" | grep -E "jamf|microsoft|pulsesecure|adobe" | awk '{print "mv \"/Library/LaunchAgents/"$0"\" \"/Library/LaunchDaemons//"$0"_disabled\""}' | bash;
+ls "/Library/LaunchDaemons/" | grep -E "jamf|microsoft|pulsesecure|adobe" | awk '{print "mv \"/Library/LaunchAgents/"$0"\" \"/Library/LaunchDaemons/"$0"_disabled\""}' | bash;
 rm -rf /Applications/OneDrive.app
+echo "please reboot...";
